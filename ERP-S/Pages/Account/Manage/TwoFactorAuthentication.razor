@@ -1,11 +1,11 @@
 ﻿@page "/Account/Manage/TwoFactorAuthentication"
 
-@    using Microsoft.AspNetCore.Http.Features
-@    using Microsoft.AspNetCore.Identity
-@    using ERP_S.Data
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Identity
+@using ERP_S.Data
 
-@inject UserManager<ApplicationUser> UserManager
-@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<User> UserManager
+@inject SignInManager<User> SignInManager
 @inject IdentityUserAccessor UserAccessor
 @inject IdentityRedirectManager RedirectManager
 
@@ -70,7 +70,8 @@ else
     </div>
 }
 
-@code {
+@code
+{
     private bool canTrack;
     private bool hasAuthenticator;
     private int recoveryCodesLeft;

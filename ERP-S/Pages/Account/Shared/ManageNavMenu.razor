@@ -1,7 +1,5 @@
-﻿@    using Microsoft.AspNetCore.Identity
-@    using ERP_S.Data
-
-@inject SignInManager<ApplicationUser> SignInManager
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
 
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">
@@ -27,7 +25,8 @@
     </li>
 </ul>
 
-@code {
+@code
+{
     private bool hasExternalLogins;
 
     protected override async Task OnInitializedAsync()

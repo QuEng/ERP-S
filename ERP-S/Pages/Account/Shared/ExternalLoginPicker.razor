@@ -1,8 +1,8 @@
-﻿@    using Microsoft.AspNetCore.Authentication
-@    using Microsoft.AspNetCore.Identity
-@    using ERP_S.Data
+﻿@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Identity
+@using ERP_S.Data
 
-@inject SignInManager<ApplicationUser> SignInManager
+@inject SignInManager<User> SignInManager
 @inject IdentityRedirectManager RedirectManager
 
 @if (externalLogins.Length == 0)
@@ -30,7 +30,8 @@ else
     </form>
 }
 
-@code {
+@code
+{
     private AuthenticationScheme[] externalLogins = [];
 
     [SupplyParameterFromQuery]

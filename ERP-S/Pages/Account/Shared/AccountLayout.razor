@@ -1,5 +1,5 @@
 ﻿@inherits LayoutComponentBase
-@layout ERP_S.Components.Layout.MainLayout
+@layout ERP_S.Pages.Layout.MainLayout
 @inject NavigationManager NavigationManager
 
 @if (HttpContext is null)
@@ -11,7 +11,8 @@ else
     @Body
 }
 
-@code {
+@code
+{
     [CascadingParameter]
     private HttpContext? HttpContext { get; set; }
 

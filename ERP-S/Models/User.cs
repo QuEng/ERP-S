@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Models;
+namespace ERP_S.Models;
 
 public class User : IdentityUser
 {
